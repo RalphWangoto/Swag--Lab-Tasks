@@ -1,7 +1,7 @@
 import { loginHelper } from '../../support/helpers/loginHelper';
 import { productsPage } from '../../page-modules/productsPage';
 
-const username = Cypress.env('username');
+const username = Cypress.env('standard_user');
 const password = Cypress.env('password');
 
 const firstName = 'Ralph';
