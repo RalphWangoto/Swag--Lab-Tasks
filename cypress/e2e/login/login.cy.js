@@ -2,7 +2,7 @@ import { loginHelper} from "../../support/helpers/loginHelper";
 import { LoginPage } from "../../page-modules/loginPage";
 
 describe('Login Tests', () => {
-    const username = Cypress.env('username');
+    const username = Cypress.env('standard_user');
     const password = Cypress.env('password');
     
     beforeEach(() => {
