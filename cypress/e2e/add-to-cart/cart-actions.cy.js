@@ -12,9 +12,6 @@ describe('Add to Cart Tests', () => {
     before(() => {
         // Visit the base URL before each test
         cy.visit(Cypress.expose('baseUrl'));
-        cy.clearAllLocalStorage();
-	    cy.clearAllSessionStorage();
-	    cy.clearLocalStorage();
 
     });
 

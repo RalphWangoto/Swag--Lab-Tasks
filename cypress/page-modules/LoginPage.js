@@ -1,4 +1,4 @@
-export const LoginPage = {
+export const loginPage = {
     usernameInput: "#user-name",
     passwordInput: "#password",
     loginButton: "#login-button",

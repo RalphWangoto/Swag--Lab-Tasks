@@ -1,9 +1,12 @@
-import { LoginPage } from "../../page-modules/loginPage";
+import { loginPage } from "../../page-modules/loginPage";
 
 export const loginHelper = {
     login: (username, password) => {
-        cy.get(LoginPage.usernameInput).type(username);
-        cy.get(LoginPage.passwordInput).type(password);
-        cy.get(LoginPage.loginButton).click();
+        cy.clearAllLocalStorage();
+	    cy.clearAllSessionStorage();
+	    cy.clearLocalStorage();
+        cy.get(loginPage.usernameInput).type(username);
+        cy.get(loginPage.passwordInput).type(password);
+        cy.get(loginPage.loginButton).click();
     }
 };
