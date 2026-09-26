@@ -5,4 +5,5 @@ export const loginPage = {
     errorMessage: "h3[data-test='error']",
     loginCredentials: "#login_credentials",
     loginPassword: ".login_password",
+    
 };
