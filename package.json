@@ -2,22 +2,23 @@
   "name": "cypress-task",
   "version": "1.0.0",
   "description": "Cypress Project- JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://github.com/RalphWangoto/Swag--Lab-Tasks#readme",
+  "bugs": {
+    "url": "https://github.com/RalphWangoto/Swag--Lab-Tasks/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RalphWangoto/Swag--Lab-Tasks.git"
   },
-  "author": "Ralph Wangoto",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RalphWangoto/Swag--Lab-Tasks/issues"
+  "author": "Ralph Wangoto",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/RalphWangoto/Swag--Lab-Tasks#readme",
   "devDependencies": {
-    "cypress": "^14.5.3",
+    "cypress": "^16.1.0",
     "cypress-mochawesome-reporter": "^3.8.4",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^5.0.0",

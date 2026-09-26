@@ -2,12 +2,12 @@ import { loginHelper} from "../../support/helpers/loginHelper";
 import { LoginPage } from "../../page-modules/loginPage";
 
 describe('Login Tests', () => {
-    const username = Cypress.env('standard_user');
-    const password = Cypress.env('password');
-    
+    const username = Cypress.expose('standard_user');
+    const password = Cypress.expose('password');
+
     beforeEach(() => {
         // Visit the base URL before each test
-        cy.visit(Cypress.env('baseUrl'));
+        cy.visit(Cypress.expose('baseUrl'));
     });
 
     function clearInputs() {
@@ -25,7 +25,7 @@ describe('Login Tests', () => {
 
     it('should test login with invalid credentials', () => {
         // Negative test case: Attempt to login with invalid credentials
-        loginHelper.login(Cypress.env('invalidUsername'), Cypress.env('invalidPassword'));
+        loginHelper.login(Cypress.expose('invalidUsername'), Cypress.expose('invalidPassword'));
         cy.get(LoginPage.errorMessage).should('be.visible');
         cy.get(LoginPage.errorMessage).should('contain', 'Epic sadface: Username and password do not match any user in this service');
     });

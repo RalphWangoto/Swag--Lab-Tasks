@@ -1,4 +1,8 @@
+import fs from 'fs';
 const { defineConfig } = require("cypress");
+const env = JSON.parse(
+  fs.readFileSync('cypress.env.json', 'utf8')
+)
 
 module.exports = defineConfig({
   reporter: require.resolve('mochawesome'), // Explicit path
@@ -12,6 +16,14 @@ module.exports = defineConfig({
     inlineAssets: true,
     timestamp: 'mmddyyyy_HHMMss'
   },
+  expose: {
+      standard_user: env.standard_user,
+      visual_user: env.visual_user,
+      password: env.password,
+      baseUrl: env.baseUrl,
+      invalidUsername: env.invalidUsername,
+      invalidPassword: env.invalidPassword
+    },
   e2e: {
     testIsolation: false,
     defaultCommandTimeout: 25000,

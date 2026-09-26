@@ -1,17 +1,21 @@
 import { loginHelper } from '../../support/helpers/loginHelper';
 import { productsPage } from '../../page-modules/productsPage';
 
-const username = Cypress.env('standard_user');
-const password = Cypress.env('password');
+const username = Cypress.expose('standard_user');
+const password = Cypress.expose('password');
 
 const firstName = 'Ralph';
 const lastName = 'Rough';
 const postalCode = '12345';
 
 describe('Add to Cart Tests', () => {
-    beforeEach(() => {
+    before(() => {
         // Visit the base URL before each test
-        cy.visit(Cypress.env('baseUrl'));
+        cy.visit(Cypress.expose('baseUrl'));
+        cy.clearAllLocalStorage();
+	    cy.clearAllSessionStorage();
+	    cy.clearLocalStorage();
+
     });
 
     it('should add, remove, and proceed to checkout a product to the cart', () => {
